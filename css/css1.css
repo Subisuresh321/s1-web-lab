@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+.div1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: coral;
+}
+img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.div2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(186, 33, 33);
+  color: coral;
+}
+.innerdiv {
+  border-left: 2px solid rgb(213, 25, 25);
+  padding: 10px;
+  color: coral;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 300px;
+  width: 70%;
+}
+
+.image1 {
+  z-index: 1;
+}
+.image2 {
+  z-index: 2;
+  animation: blink 4s infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
