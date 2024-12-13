@@ -27,7 +27,27 @@
         border-color: black;
         border-radius: 5px;
     }
+    #sub-title-container{
+        background-color: aqua;
+        color: tomato;
+        justify-items:left;
+        height: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: large;
+        padding: auto;
+    }
 
+    #string-content{
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #math-content{
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+    }
 </style>
 <body>
 <div id="main">
@@ -44,19 +64,49 @@
             string
             </button>
             <button id="btn2" onclick="math()">
-            Hash
+            Math
             </button>
     </div>
 </div>
 <div id="string-content">
-
+    <div id="sub-title-container">
+        <h3>Strings</h3>
+    </div>
+    <div>
+    <p>
+        Strngs Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odit natus odio impedit, iusto eaque dicta saepe aliquid debitis at molestias officiis necessitatibus sint, doloribus rem similique nemo et consequuntur?
+        Quos praesentium sequi in maiores recusandae eum, fugit inventore eaque exercitationem quidem. Iste neque voluptas, alias cumque corporis ratione fugiat nobis eos soluta ducimus, ad cum officia. Delectus, blanditiis cupiditate?
+        Ab rem et ipsa temporibus illum exercitationem eaque doloribus sit minima. Explicabo perferendis cum odio accusantium tempore quae, atque cumque quos placeat vel, ratione consequuntur. Aut eius facere tenetur explicabo.
+        Molestiae, asperiores totam possimus saepe veritatis tenetur error, unde ab quasi architecto aut quia perspiciatis rerum natus? Sed mollitia, nesciunt omnis, blanditiis quos vel dignissimos non, distinctio rerum quasi aperiam.
+        Ad aut saepe, sunt impedit qui accusamus ipsam eligendi unde repudiandae? Repellendus labore autem fugit, id porro, at qui laboriosam nulla dolorum sapiente a reiciendis alias! Recusandae voluptate rerum perferendis!
+    </p>
+</div>
 </div>
 <div id="math-content">
-    
+    <div id="sub-title-container">
+        <h3>Math</h3>
+    </div>
+    <div>
+    <p>
+       Maths Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident odit natus odio impedit, iusto eaque dicta saepe aliquid debitis at molestias officiis necessitatibus sint, doloribus rem similique nemo et consequuntur?
+        Quos praesentium sequi in maiores recusandae eum, fugit inventore eaque exercitationem quidem. Iste neque voluptas, alias cumque corporis ratione fugiat nobis eos soluta ducimus, ad cum officia. Delectus, blanditiis cupiditate?
+        Ab rem et ipsa temporibus illum exercitationem eaque doloribus sit minima. Explicabo perferendis cum odio accusantium tempore quae, atque cumque quos placeat vel, ratione consequuntur. Aut eius facere tenetur explicabo.
+        Molestiae, asperiores totam possimus saepe veritatis tenetur error, unde ab quasi architecto aut quia perspiciatis rerum natus? Sed mollitia, nesciunt omnis, blanditiis quos vel dignissimos non, distinctio rerum quasi aperiam.
+        Ad aut saepe, sunt impedit qui accusamus ipsam eligendi unde repudiandae? Repellendus labore autem fugit, id porro, at qui laboriosam nulla dolorum sapiente a reiciendis alias! Recusandae voluptate rerum perferendis!
+    </p>
+    </div>
 </div>
-
 </body>
 <script>
-    
+    function string()
+    {
+        document.getElementById('string-content').style.display='flex';
+        document.getElementById('math-content').style.display='none';
+    }
+    function math()
+    {
+        document.getElementById('math-content').style.display='flex';
+        document.getElementById('string-content').style.display='none';
+    }
 </script>
 </html>

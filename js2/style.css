@@ -1,0 +1,9 @@
+#btn1{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: chocolate;
+    color: black;
+    border-radius: 20px;
+}
+body{
+    background-color: aquamarine;
+}
