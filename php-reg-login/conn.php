@@ -1,10 +1,6 @@
 <?php
 $conn = mysqli_connect('localhost','root','','student');
-if($conn)
-{
-    echo "Connection established!";
-}
-else
+if(!$conn)
 {
     echo "Connection Failed!";
 }

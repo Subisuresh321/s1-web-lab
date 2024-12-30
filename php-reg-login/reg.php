@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     if($spassword!=$repassword)
     echo "NOT SAME PASSWORD";
     else{
-    $query="INSERT INTO student (sname,sno,semail,password) VALUES ('$sname',$sno,'$semail','$spassword')";
+    $query="INSERT INTO student (sname,sno,semail,spassword) VALUES ('$sname',$sno,'$semail','$spassword')";
     $result=mysqli_query($conn,$query);
     if($result)
     echo "Registered";
