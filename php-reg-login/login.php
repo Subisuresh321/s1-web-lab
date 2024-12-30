@@ -4,8 +4,21 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 {
     $semail=$_POST["semail"];
     $spassword=$_POST["spassword"];
-    $query="SELECT FROM * student where semail='$semail' AND spassword='$spassword'";
+    $query="SELECT * FROM student where semail='$semail' AND spassword='$spassword'";
     $result=mysqli_query($conn,$query);
+
+    if($result->num_rows>0)
+    {
+        while($rows=$result->fetch_assoc())
+        {
+            echo "<script>alert('Welcome ".$rows['sname']."')</script>";
+        }
+    }
+    else
+    {
+         echo "<script>alert('INVALID EMAIL & PASSWORD')</script>";
+    }
+    mysqli_close($conn);
 
 }
 ?>

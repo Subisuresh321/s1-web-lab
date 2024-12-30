@@ -14,9 +14,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $query="INSERT INTO student (sname,sno,semail,spassword) VALUES ('$sname',$sno,'$semail','$spassword')";
     $result=mysqli_query($conn,$query);
     if($result)
-    echo "Registered";
+    echo "<script>alert('Registered')</script>";
     else
-    echo "Not Registered";}
+    echo "<script>alert('Not Registered')</script>";
+    }
     mysqli_close($conn);
 }
 ?>
