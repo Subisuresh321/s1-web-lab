@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image JS3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-container">
+        <img class="image" id="firstImg" src="first.jpeg" onmouseover="removeImg()" onmouseout="addImg()">
+        <img class="image" id="secondImg" src="second.jpg">
+    </div>
+    <script>
+        function removeImg()
+        {
+            var img1=document.getElementById('firstImg');
+            var img2=document.getElementById('secondImg');
+            img1.style.opacity="0";
+            img2.style.opacity="1"; 
+            
+        }
+        function addImg()
+        {
+            var img1=document.getElementById('firstImg');
+            var img2=document.getElementById('secondImg'); 
+            img1.style.opacity="1";
+            img2.style.opacity="0";
+            
+        }
+    </script>
+</body>
+</html>
