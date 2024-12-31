@@ -44,9 +44,16 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         var spassword=document.getElementById("spassword").value;
         var repassword=document.getElementById("repassword").value;
 
+        let nameFormat= /^(?=.*[a-z])[A-Z][A-Za-z\s.]+$/;
+
         if(sname=="" || sno=="" || semail=="" || spassword=="" || repassword=="")
     {
         alert("All fields must be filled");
+        return false;
+    }
+    if(!nameFormat.test(sname))
+    {
+        alert("Name should start with capital letter and shouldn't contain digits & symbols");
         return false;
     }
     if(sno.length!=10)
