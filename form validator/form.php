@@ -44,7 +44,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         var spassword=document.getElementById("spassword").value;
         var repassword=document.getElementById("repassword").value;
 
-        let nameFormat= /^(?=.*[a-z])[A-Z][A-Za-z\s.]+$/;
+        let nameFormat= /^[A-Z][A-Za-z\s.]+$/;
+        let emailFormat=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let passwordFormat=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%&*?])[a-zA-Z\d@$!%&*?]{8,}$/;
+        let numberFormat=/^\d{10}$/;
 
         if(sname=="" || sno=="" || semail=="" || spassword=="" || repassword=="")
     {
@@ -56,17 +59,23 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         alert("Name should start with capital letter and shouldn't contain digits & symbols");
         return false;
     }
-    if(sno.length!=10)
+    if(!numberFormat.test(sno))
     {
         alert("Phone number should have 10 digits");
         return false;
     }
-    if(spassword.length<8)
+    if(!emailFormat.test(semail))
     {
-        alert("Password should have atleast 8 characters");
+        alert("Incorrect Email Format");
         return false;
     }
-    if(password!=repassword)
+    if(!passwordFormat.test(spassword))
+    {
+        alert("Password must be at least 8 characters long, contain at least one lowercase letter, one uppercase letter, one digit, and one special character.");
+        return false;
+    }
+
+    if(spassword!=repassword)
     {
         alert("Passwords donot match!!!");
         return false;
