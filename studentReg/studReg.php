@@ -19,6 +19,7 @@ if($conn)
         }
         else
         echo "<script>alert('Not Registered')</script>";
+        mysqli_close($conn);
     }
 }
 ?>
